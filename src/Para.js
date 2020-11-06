@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import styled from 'styled-components';
+import theme from './theme';
 
 export default function SetPara(){
     const [explanation, setExplanation] = useState('About');
@@ -15,13 +17,22 @@ export default function SetPara(){
 
     return (
         <div className='textContain'>
-            <p className='mainPara'>
+            <StyledPara className='mainPara'>
                 {explanation}
-            </p>
-            <p className='copyright'>
+            </StyledPara>
+            <StyledCopyright className='copyright'>
                 Copyright: {copyright}
-            </p>
+            </StyledCopyright>
         </div>
-
     )
 }
+
+
+const StyledPara = styled.p`
+font-size:.9rem;
+margin-bottom: 5%;
+`
+
+const StyledCopyright = styled.p`
+font-size: .7rem;
+`

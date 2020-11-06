@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import styled, { keyframes } from 'styled-components';
+import theme from './theme';
 
 export default function SetPicture(){
     const [currentImg, setCurrentImg] = useState(null);
@@ -12,8 +14,17 @@ export default function SetPicture(){
     }, []);
     // let img = currentImg.url;
     return (
-        <div className='container'>
-            <img src={currentImg} alt='' />
-        </div>
+        <StyledContainer className='container'>
+            <StyledImg src={currentImg} alt='' />
+        </StyledContainer>
     )
 }
+
+const StyledContainer = styled.div`
+  width: 100%;
+  margin: 2.5% 0;
+`
+
+const StyledImg = styled.img`
+    width: 100%;
+`
