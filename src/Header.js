@@ -18,5 +18,5 @@ margin: 5% 0;
 
 const StyledH1 = styled.h1`
 color: ${theme.titleColor}
-font-family: Arial, Helvetica, sans-serif;
+font-family: Arial;
 `
